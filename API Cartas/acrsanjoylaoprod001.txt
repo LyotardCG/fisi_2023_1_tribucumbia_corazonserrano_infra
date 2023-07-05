@@ -1,0 +1,53 @@
+acrsanjoylaoprod001
+
+-----------------
+--Subir Docker---
+
+
+docker build -t acrsanjoylaoprod001/api-cartas:v1 .
+docker tag acrsanjoylaoprod001/api-cartas:v1 acrsanjoylaoprod001.azurecr.io/api-cartas
+docker push acrsanjoylaoprod001.azurecr.io/api-cartas
+
+
+-----------------
+
+az account set --subscription cbe5be3a-f55b-4feb-a3e0-9a8a4f5e00c6
+
+az acr login -n acrsanjoylaoprod001 --expose-token
+
+docker login acrsanjoylaoprod001.azurecr.io -u 00000000-0000-0000-0000-000000000000 -p eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNPQVU6UERZSDo0SVJYOjM2SEI6TFYzUDpWNFBGOko0NzQ6SzNOSjpPS1JCOlRZQUo6NEc0Szo1Q1NEIn0.eyJqdGkiOiIxOTkyYTMyNC0zMGZhLTQxMDctODliYS1jZWRkNGQ5Nzg1MzkiLCJzdWIiOiJsZW9uYXJkby5jYWh1YW5hMUB1bm1zbS5lZHUucGUiLCJuYmYiOjE2ODg0Mjc3ODIsImV4cCI6MTY4ODQzOTQ4MiwiaWF0IjoxNjg4NDI3NzgyLCJpc3MiOiJBenVyZSBDb250YWluZXIgUmVnaXN0cnkiLCJhdWQiOiJhY3JzYW5qb3lsYW9wcm9kMDAxLmF6dXJlY3IuaW8iLCJ2ZXJzaW9uIjoiMS4wIiwicmlkIjoiNzQxNzAwYjYwMjgyNDgwMTlkNzU2ZDM1MzBiNzQ2NzgiLCJncmFudF90eXBlIjoicmVmcmVzaF90b2tlbiIsImFwcGlkIjoiYjY3N2MyOTAtY2Y0Yi00YThlLWE2MGUtOTFiYTY1MGE0YWJlIiwidGVuYW50IjoiNzE3YjlhNzktMWI5MS00MWFiLWE2ZjctYTU3OWI0NmE5YjQxIiwicGVybWlzc2lvbnMiOnsiQWN0aW9ucyI6WyJyZWFkIiwid3JpdGUiLCJkZWxldGUiLCJkZWxldGVkL3JlYWQiLCJkZWxldGVkL3Jlc3RvcmUvYWN0aW9uIl0sIk5vdEFjdGlvbnMiOm51bGx9LCJyb2xlcyI6W119.2682QXTuDP3vFZrJyr0AXIankI1CoDTMr-_vsa1Lx4QQdOxD2XBEfMj67sW3_vToSDJateb5iVhbrL8UbMp-6xMNN9VHg1FXWfclKlbcDtg_ByllLLRt5GMfGXfF9W3f21ae0cUGjl3rKpJGvw4B_0B2_qe19Hnc9P64928E6x8nNhLvsvPdaLjmgjDWPFHWamDYTMV4l-uNH9b6Py3LPfLGO_NrZzvI8hRSQshfVOdGo2gROCfRhZZo4wlpdqja7QyhLegaPD7SCvTOXIi5vFPxyfhb8SlfcQmzxC695qD3bhSC4r9sU1OtoEiQ-1HMWhmFWl4xdg2uKURgKmiQqQ
+
+az aks get-credentials --resource-group rg-aks-prod-001 --name aks-service-sanjoylao-prod-001
+
+az aks update -n aks-service-sanjoylao-prod-001 -g rg-aks-prod-001 --attach-acr acrsanjoylaoprod001
+--------------------------------------
+
+az aks enable-addons --resource-group rg-aks-prod-001 --name aks-service-sanjoylao-prod-001 --addons http_application_routing
+
+az aks show --resource-group rg-aks-prod-001 --name aks-service-sanjoylao-prod-001 --query addonProfiles.httpApplicationRouting.config.HTTPApplicationRoutingZoneName -o table
+
+DNS: 2db5f954f43042069dae.eastus.aksapp.io
+
+---------------------------------------
+
+kubectl apply -f api-cartas-dep.yaml
+
+kubectl apply -f api-cartas-serv.yaml
+
+kubectl apply -f api-cartas-ingress.yaml
+
+
+http://api-cartas.2db5f954f43042069dae.eastus.aksapp.io/
+
+
+--------------------------------------
+
+Obtener IP de aks
+az aks show --resource-group rg-aks-prod-001 --name aks-service-sanjoylao-prod-001 --query "ipProfile.ip" --output tsv
+
+
+
+
+
+
+

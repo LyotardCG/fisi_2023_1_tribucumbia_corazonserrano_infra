@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-usuarios
+  labels:
+    app: api-usuarios
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: api-usuarios
+  template:
+    metadata:
+      labels:
+        app: api-usuarios
+    spec:
+      containers:
+      - name: api-usuarios
+        image: acrsanjoylaoprod001.azurecr.io/api-usuarios:latest
+        ports:
+        - containerPort: 9000

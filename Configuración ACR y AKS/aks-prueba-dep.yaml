@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: aks-prueba
+  labels:
+    app: aks-prueba
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: aks-prueba
+  template:
+    metadata:
+      labels:
+        app: aks-prueba
+    spec:
+      containers:
+      - name: aks-prueba
+        image: acrsanjoylaoprod001.azurecr.io/proyecto_sjl:latest
+        ports:
+        - containerPort: 9000
