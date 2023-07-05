@@ -1,0 +1,1071 @@
+{
+	"info": {
+		"_postman_id": "ec7f2c15-bf72-43b5-bea7-a0bc90f18349",
+		"name": "API Usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22815014",
+		"_collection_link": "https://crimson-zodiac-17675.postman.co/workspace/New-Team-Workspace~5a92b10f-acec-4934-bfc9-6384fcdcfbfd/collection/22815014-ec7f2c15-bf72-43b5-bea7-a0bc90f18349?action=share&creator=22815014&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "listar-usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/listar-usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"listar-usuarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar-usuarios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/listar-usuarios",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"listar-usuarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1439"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59f-sq54Y6NFQDl0nUm+Pc8XeYRzP5s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:18:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"usuarios\": [\n        {\n            \"idUsuario\": 1,\n            \"nombres\": \"Ricardo Andre\",\n            \"apellidos\": \"Mujica del Rosario\",\n            \"telefono\": \"990145523\",\n            \"correo\": \"rmujica@sanjoy.com\",\n            \"rol\": \"administrador\"\n        },\n        {\n            \"idUsuario\": 2,\n            \"nombres\": \"Gabriel Omar\",\n            \"apellidos\": \"Guillen Melgarejo\",\n            \"telefono\": \"979245323\",\n            \"correo\": \"gmelgarejo@sanjoy.com\",\n            \"rol\": \"administrador\"\n        },\n        {\n            \"idUsuario\": 3,\n            \"nombres\": \"Jafet Raul\",\n            \"apellidos\": \"Puyen Huapaya\",\n            \"telefono\": \"980345623\",\n            \"correo\": \"jpuyen@sanjoy.com\",\n            \"rol\": \"administrador\"\n        },\n        {\n            \"idUsuario\": 4,\n            \"nombres\": \"Juan Armando\",\n            \"apellidos\": \"Rodriguez Mercer\",\n            \"telefono\": \"990045723\",\n            \"correo\": \"jrodriguez@sanjoy.com\",\n            \"rol\": \"empleado\"\n        },\n        {\n            \"idUsuario\": 5,\n            \"nombres\": \"Jose Luis\",\n            \"apellidos\": \"Ayala Diaz\",\n            \"telefono\": \"960045923\",\n            \"correo\": \"jayala@sanjoy.com\",\n            \"rol\": \"empleado\"\n        },\n        {\n            \"idUsuario\": 6,\n            \"nombres\": \"Luis Miguel\",\n            \"apellidos\": \"Guerron Diaz\",\n            \"telefono\": \"930645023\",\n            \"correo\": \"lguerron@sanjoy.com\",\n            \"rol\": \"empleado\"\n        },\n        {\n            \"idUsuario\": 7,\n            \"nombres\": \"Andres Pablo\",\n            \"apellidos\": \"Trujillo Flores\",\n            \"telefono\": \"910845223\",\n            \"correo\": \"atrujillo@sanjoy.com\",\n            \"rol\": \"cliente\"\n        },\n        {\n            \"idUsuario\": 8,\n            \"nombres\": \"Josue Pedro\",\n            \"apellidos\": \"Salinas Velez\",\n            \"telefono\": \"960945123\",\n            \"correo\": \"jsalinas@sanjoy.com\",\n            \"rol\": \"cliente\"\n        },\n        {\n            \"idUsuario\": 9,\n            \"nombres\": \"Walter Jesus\",\n            \"apellidos\": \"Berrospi Coelho\",\n            \"telefono\": \"970145123\",\n            \"correo\": \"wberrospi@sanjoy.com\",\n            \"rol\": \"cliente\"\n        },\n        {\n            \"idUsuario\": 10,\n            \"nombres\": \"Manuel Jesus\",\n            \"apellidos\": \"Espinoza Rodriguez\",\n            \"telefono\": \"998845323\",\n            \"correo\": \"mespinoza@sanjoy.com\",\n            \"rol\": \"cliente\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "detallar-usuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/detallar-usuarios/8",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"detallar-usuarios",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "detallar-usuarios",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/detallar-usuarios/8",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"detallar-usuarios",
+										"8"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "137"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"89-W/H7uPCfdqeGNtyHRJGORVoQbYU\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:18:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUsuario\": 8,\n    \"nombres\": \"Josue Pedro\",\n    \"apellidos\": \"Salinas Velez\",\n    \"telefono\": \"960945123\",\n    \"correo\": \"jsalinas@sanjoy.com\",\n    \"rol\": \"cliente\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "listar-usuarios-empleados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImNsaWVudGUiLCJleHAiOjE2ODc5MDI3NjkxMDAsImlhdCI6MTY4NzkwMTg2OX0.aJqhLKfudGCb17SBJp3nbQ4VECetcuWdqIBWlxEE6H4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/listar-usuarios-empleados",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"listar-usuarios-empleados"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar-usuarios-empleados",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/listar-usuarios-empleados",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"listar-usuarios-empleados"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "899"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"383-TwVDhZuurztv/z1KL7NS0w+0xW4\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:18:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"empleados\": [\n        {\n            \"idUsuario\": 1,\n            \"nombres\": \"Ricardo Andre\",\n            \"apellidos\": \"Mujica del Rosario\",\n            \"correo\": \"rmujica@sanjoy.com\",\n            \"telefono\": \"990145523\",\n            \"sede\": \"SanJoy-SanBorja\"\n        },\n        {\n            \"idUsuario\": 2,\n            \"nombres\": \"Gabriel Omar\",\n            \"apellidos\": \"Guillen Melgarejo\",\n            \"correo\": \"gmelgarejo@sanjoy.com\",\n            \"telefono\": \"979245323\",\n            \"sede\": \"SanJoy-SJL\"\n        },\n        {\n            \"idUsuario\": 3,\n            \"nombres\": \"Jafet Raul\",\n            \"apellidos\": \"Puyen Huapaya\",\n            \"correo\": \"jpuyen@sanjoy.com\",\n            \"telefono\": \"980345623\",\n            \"sede\": \"SanJoy-Miraflores\"\n        },\n        {\n            \"idUsuario\": 4,\n            \"nombres\": \"Juan Armando\",\n            \"apellidos\": \"Rodriguez Mercer\",\n            \"correo\": \"jrodriguez@sanjoy.com\",\n            \"telefono\": \"990045723\",\n            \"sede\": \"SanJoy-SanBorja\"\n        },\n        {\n            \"idUsuario\": 5,\n            \"nombres\": \"Jose Luis\",\n            \"apellidos\": \"Ayala Diaz\",\n            \"correo\": \"jayala@sanjoy.com\",\n            \"telefono\": \"960045923\",\n            \"sede\": \"SanJoy-SJL\"\n        },\n        {\n            \"idUsuario\": 6,\n            \"nombres\": \"Luis Miguel\",\n            \"apellidos\": \"Guerron Diaz\",\n            \"correo\": \"lguerron@sanjoy.com\",\n            \"telefono\": \"930645023\",\n            \"sede\": \"SanJoy-Miraflores\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "detallar-usuarios-empleados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsInJvbGUiOiJhZG1pbmlzdHJhZG9yIiwiZXhwIjoxNjg3OTAzMDQzMDA2LCJpYXQiOjE2ODc5MDIxNDN9.mN9eFCsu3OALbFYWqG2u4dlFsin-2mhdU27qVHMwBvw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/detallar-usuarios-empleados/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"detallar-usuarios-empleados",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "detallar-usuarios-empleados",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/detallar-usuarios-empleados/3",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"detallar-usuarios-empleados",
+										"3"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "118"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"76-UL+35aF21A8QDotF3TiZn31nV0U\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:19:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idUsuario\": 3,\n    \"nombres\": \"Jafet Raul\",\n    \"apellidos\": \"Puyen Huapaya\",\n    \"telefono\": \"980345623\",\n    \"correo\": \"jpuyen@sanjoy.com\"\n}"
+						}
+					]
+				},
+				{
+					"name": "actualizar-usuarios-empleados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsInJvbGUiOiJhZG1pbmlzdHJhZG9yIiwiZXhwIjoxNjg3OTAzODI4NDI3LCJpYXQiOjE2ODc5MDI5Mjh9.sh6yWR48wN29_ewLlkbdxAz7DCIU8bJbSqxGhMq2Ql0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idSede\":1,\r\n    \"estado\":null,\r\n    \"nombres\":\"Leandro\",\r\n    \"apellidos\":\"Salazar\",\r\n    \"telefono\":\"9939393\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/actualizar-usuarios-empleados/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"actualizar-usuarios-empleados",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "actualizar-usuarios-empleados",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idSede\":1,\r\n    \"estado\":null,\r\n    \"nombres\":\"Leandro\",\r\n    \"apellidos\":\"Salazar\",\r\n    \"telefono\":\"9939393\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/actualizar-usuarios-empleados/3",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"actualizar-usuarios-empleados",
+										"3"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-rghPBaszxsihN/bS7T/5JPqT8Wc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:31:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"usuario actualizado correctamente\"\n}"
+						}
+					]
+				},
+				{
+					"name": "eliminar-usuarios-empleados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsInJvbGUiOiJhZG1pbmlzdHJhZG9yIiwiZXhwIjoxNjg3OTA0MjA1NzUzLCJpYXQiOjE2ODc5MDMzMDV9.I8o8LhpkNxo_l-_YsFpWx6_SBFh2flZ0W6wB1hK_ERk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/eliminar-usuarios-empleados/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"eliminar-usuarios-empleados",
+								"3"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "eliminarUsuario",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/api/v1/usuarios/eliminar/2",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"api",
+										"v1",
+										"usuarios",
+										"eliminar",
+										"2"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-JKSNZp9V85RvGmiwHBEmEAblN1c\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Jun 2023 22:02:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"usuario eliminado correctamente\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "listar-usuarios-clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/listar-usuarios-clientes",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"listar-usuarios-clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar-usuarios-clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/listar-usuarios-clientes",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"listar-usuarios-clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "586"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24a-iLHTHgnIBTj9QSth6fhjUgVci9A\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:32:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"clientes\": [\n        {\n            \"idUsuario\": 7,\n            \"nombres\": \"Andres Pablo\",\n            \"apellidos\": \"Trujillo Flores\",\n            \"dni\": \"74567899\",\n            \"correo\": \"atrujillo@sanjoy.com\",\n            \"telefono\": \"910845223\"\n        },\n        {\n            \"idUsuario\": 8,\n            \"nombres\": \"Josue Pedro\",\n            \"apellidos\": \"Salinas Velez\",\n            \"dni\": \"45678756\",\n            \"correo\": \"jsalinas@sanjoy.com\",\n            \"telefono\": \"960945123\"\n        },\n        {\n            \"idUsuario\": 9,\n            \"nombres\": \"Walter Jesus\",\n            \"apellidos\": \"Berrospi Coelho\",\n            \"dni\": \"09984567\",\n            \"correo\": \"wberrospi@sanjoy.com\",\n            \"telefono\": \"970145123\"\n        },\n        {\n            \"idUsuario\": 10,\n            \"nombres\": \"Manuel Jesus\",\n            \"apellidos\": \"Espinoza Rodriguez\",\n            \"dni\": \"74239878\",\n            \"correo\": \"mespinoza@sanjoy.com\",\n            \"telefono\": \"998845323\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "detallar-usuarios-clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/detallar-usuarios-clientes/8",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"detallar-usuarios-clientes",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "detallar-usuarios-clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/detallar-usuarios-clientes/8",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"detallar-usuarios-clientes",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "124"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7c-R0b5wXYT7KgiyhoP1q4RH2Jnvhw\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:32:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nombres\": \"Josue Pedro\",\n    \"apellidos\": \"Salinas Velez\",\n    \"dni\": \"45678756\",\n    \"correo\": \"jsalinas@sanjoy.com\",\n    \"telefono\": \"960945123\"\n}"
+						}
+					]
+				},
+				{
+					"name": "actualizar-usuarios-clientes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dni\":\"75407100\",\r\n    \"nombres\":\"Leandro\",\r\n    \"apellidos\":\"Salazar\",\r\n    \"telefono\":\"9939393\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/actualizar-usuarios-clientes/8",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"actualizar-usuarios-clientes",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "actualizar-usuarios-clientes",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dni\":\"45678757\",\r\n    \"nombres\":\"Josue Pedro\",\r\n    \"apellidos\":\"Salinas Velez\",\r\n    \"telefono\":\"960945124\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/actualizar-usuarios-clientes/8",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"actualizar-usuarios-clientes",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "47"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f-qOI6M8uUXJbwprZV3pdLuLNZaeM\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:33:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Cliente actualizado correctamente\"\n}"
+						}
+					]
+				},
+				{
+					"name": "eliminar-usuarios-clientes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/eliminar-usuarios-clientes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"eliminar-usuarios-clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"correo\" : \"jsalinas@sanjoy.com\",\r\n    \"password\" : \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"correo\" : \"jsalinas@sanjoy.com\",\r\n    \"password\" : \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/login",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "300"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12c-mM782wlERCbT3F0FnGMHjTySJGg\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:34:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"idUsuario\": 8,\n        \"password\": \"a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3\",\n        \"rol\": \"cliente\"\n    },\n    \"tokenSession\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImNsaWVudGUiLCJleHAiOjE2ODg1MTA5NTYzMDEsImlhdCI6MTY4ODUxMDA1Nn0.MgFJhxrNsgcugm19gTJLU9g-5qy5BbG1_Vqm1BPKfYg\"\n}"
+						}
+					]
+				},
+				{
+					"name": "registrar-usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idRol\": \"2\",\r\n    \"idSede\": \"2\",\r\n    \"nombres\":\"Pedro\",\r\n    \"apellidos\":\"Gutierrez\",\r\n    \"telefono\":\"9993933\",\r\n    \"correo\":\"pedross@pedro.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/registrar-usuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-usuarios",
+								"servicio-al-cliente",
+								"v1",
+								"registrar-usuarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "registrar-usuario",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idRol\": \"2\",\r\n    \"idSede\": \"2\",\r\n    \"nombres\":\"Pedro\",\r\n    \"apellidos\":\"Gutierrez\",\r\n    \"telefono\":\"9993933\",\r\n    \"correo\":\"pedross@pedro.com\",\r\n    \"password\":\"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-usuarios/servicio-al-cliente/v1/registrar-usuarios",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-usuarios",
+										"servicio-al-cliente",
+										"v1",
+										"registrar-usuarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-+U4fdn+QzDQUIh+6rIQJZaWU7ug\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 04 Jul 2023 22:38:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"usuario creado correctamente\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

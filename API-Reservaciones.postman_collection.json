@@ -1,0 +1,1042 @@
+{
+	"info": {
+		"_postman_id": "f4185a10-4806-4074-8711-6639c1849ec1",
+		"name": "API Reservaciones",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22815014",
+		"_collection_link": "https://crimson-zodiac-17675.postman.co/workspace/New-Team-Workspace~5a92b10f-acec-4934-bfc9-6384fcdcfbfd/collection/22815014-f4185a10-4806-4074-8711-6639c1849ec1?action=share&creator=22815014&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Reservaciones",
+			"item": [
+				{
+					"name": "crear-reservaciones",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCliente\": \"7\",\r\n    \"idSede\":\"1\",\r\n    \"numeroMesa\":\"1\",\r\n    \"numeroSillas\":\"3\",\r\n    \"horario\":\"2023-07-04 17:30:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/crear-reservaciones",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"crear-reservaciones"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "crear-reservaciones",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCliente\": \"7\",\r\n    \"idSede\":\"1\",\r\n    \"numeroMesa\":\"1\",\r\n    \"numeroSillas\":\"3\",\r\n    \"horario\":\"2023-07-04 17:30:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/crear-reservaciones",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"crear-reservaciones"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-fAeGmrK7K77Jp4JJ/7kvLbKN+YE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:25:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Reserva creada correctamente\"\n}"
+						}
+					]
+				},
+				{
+					"name": "detallar-reservaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/detallar-reservaciones/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"detallar-reservaciones",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "detallar-reservaciones",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/detallar-reservaciones/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"detallar-reservaciones",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "235"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"eb-hqOjH5bFszd+9zIn+ITIpjRzCbI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:08:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reserva\": {\n        \"idReservacion\": 1,\n        \"usuario\": \"Josue Pedro, Salinas Velez\",\n        \"numero_sillas\": 2,\n        \"atendido\": null,\n        \"sede\": \"SanJoy-SanBorja\",\n        \"direccion\": \"C. Johann Strauss 555, Lima 15037\",\n        \"horario\": \"2023-06-15 14:30:00\",\n        \"numero_mesa\": 2,\n        \"QR\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "listar-reservaciones",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImNsaWVudGUiLCJleHAiOjE2ODc5OTExMjM0MTMsImlhdCI6MTY4Nzk5MDIyM30.XCaymlcJG2NuOR28_B4RfJduVFq0zIATGRXzb3imWRg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-reservaciones",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"listar-reservaciones"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar-reservaciones",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-reservaciones",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"listar-reservaciones"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "349"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15d-2bJS8U0zbhEc4upBgqTUTnUvJGc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:09:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reservaciones\": [\n        {\n            \"idReservacion\": 1,\n            \"usuario\": \"Josue Pedro, Salinas Velez\",\n            \"sede\": \"SanJoy-SanBorja\",\n            \"numero_mesa\": 2,\n            \"numero_sillas\": 2,\n            \"horario\": \"2023-06-15 14:30:00\",\n            \"atendido\": null\n        },\n        {\n            \"idReservacion\": 2,\n            \"usuario\": \"Walter Jesus, Berrospi Coelho\",\n            \"sede\": \"SanJoy-SJL\",\n            \"numero_mesa\": 1,\n            \"numero_sillas\": 2,\n            \"horario\": \"2023-06-20 18:30:00\",\n            \"atendido\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "listar-reservaciones-sedes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsInJvbGUiOiJhZG1pbmlzdHJhZG9yIiwiZXhwIjoxNjg3OTA2MzIwODc5LCJpYXQiOjE2ODc5MDU0MjB9.MaJYq6PstKVgfPn30w5nNnAg6NTzw1nmh6vkJqzWKZw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-reservaciones-sedes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"listar-reservaciones-sedes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar-reservaciones-sedes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-reservaciones-sedes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"listar-reservaciones-sedes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "160"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a0-xIOUm8ZShb8ekIJKSO15obfR5sM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:11:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reservas\": [\n        {\n            \"idReservacion\": 1,\n            \"usuario\": \"Josue Pedro, Salinas Velez\",\n            \"numero_mesa\": 2,\n            \"numero_sillas\": 2,\n            \"horario\": \"2023-06-15T19:30:00.000Z\",\n            \"atendido\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "listar-reservaciones-clientes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwicm9sZSI6ImNsaWVudGUiLCJleHAiOjE2ODgxNjIyMjk4MDUsImlhdCI6MTY4ODE2MTMyOX0.MGVZNS70_7pxIoOldmMHEs45uK4fDQTWDPu0LapL3Kk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-reservaciones-clientes/8",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"listar-reservaciones-clientes",
+								"8"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar-reservaciones-clientes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-reservaciones-clientes/8",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"listar-reservaciones-clientes",
+										"8"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "206"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ce-8ulMdLj7lhIkUmpyHOfuFfZ+oFI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:12:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reservas\": [\n        {\n            \"idReservacion\": 1,\n            \"numero_mesa\": 2,\n            \"numero_sillas\": 2,\n            \"horario\": \"2023-06-15T19:30:00.000Z\",\n            \"atendido\": null,\n            \"QR\": null,\n            \"nombre\": \"SanJoy-SanBorja\",\n            \"direccion\": \"C. Johann Strauss 555, Lima 15037\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "actualizar-reservaciones",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"horario\": \"2023-07-04 18:30:00\",\r\n    \"numeroMesa\": \"2\",\r\n    \"numeroSillas\": \"4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/actualizar-reservaciones/4",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"actualizar-reservaciones",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "actualizar-reservaciones",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"horario\": \"2023-07-04 18:30:00\",\r\n    \"numeroMesa\": \"2\",\r\n    \"numeroSillas\": \"4\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/actualizar-reservaciones/4",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"actualizar-reservaciones",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-SZKn6vnvYHXZ/PvnCuJdU53FuKg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:43:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Reservacion modificada correctamente\"\n}"
+						}
+					]
+				},
+				{
+					"name": "eliminar-reservaciones",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCliente\": \"7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/eliminar-reservaciones/6",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"eliminar-reservaciones",
+								"6"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "eliminar-reservaciones",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"idCliente\": \"7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/eliminar-reservaciones/6",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"eliminar-reservaciones",
+										"6"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "49"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"31-5x8SJvXNDl4q5cVuGiusHrIZn+g\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:29:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Reservacion eliminada correctamente\"\n}"
+						}
+					]
+				},
+				{
+					"name": "verificar-reservaciones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/verificar-reservaciones/4",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"verificar-reservaciones",
+								"4"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "verificar-reservaciones",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/verificar-reservaciones/4",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"verificar-reservaciones",
+										"4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1316"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"524-Ol2NzmoeaImfjT2HA+delA1TUuw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:35:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reserva\": {\n        \"idReservacion\": 4,\n        \"usuario\": \"Josue Pedro, Salinas Velez\",\n        \"numero_sillas\": 3,\n        \"atendido\": 0,\n        \"sede\": \"SanJoy-SanBorja\",\n        \"direccion\": \"C. Johann Strauss 555, Lima 15037\",\n        \"horario\": \"2023-07-04 17:30:00\",\n        \"numero_mesa\": 1,\n        \"QR\": \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHQAAAB0CAYAAABUmhYnAAAAAklEQVR4AewaftIAAALVSURBVO3BQa7jSAwFwXyE7n/lnL/kqgBBsqdNMCL+YY1RrFGKNUqxRinWKMUapVijFGuUYo1SrFGKNUqxRinWKMUapVijFGuUi4eS8E0qb0pCp9Il4ZtUnijWKMUapVijXLxM5U1JOElCp3KHyh0qb0rCm4o1SrFGKdYoFx+WhDtU7lDpktCpdEk4UbkjCXeofFKxRinWKMUapVijFGuUYo1SrFEuflwSTpLQqXRJmKRYoxRrlGKNcvFhKp+k8n9S+ZcUa5RijVKsUS5eloRvSkKn0iWhU3kiCf+yYo1SrFGKNUr8wyBJeELllxVrlGKNUqxRLh5KQqfSJaFT6ZLQqXRJ6FROVLoknKg8kYRO5SQJncqbijVKsUYp1igXD6m8KQmdyptU7khCp9KpnCThm4o1SrFGKdYoFw8l4U0qXRLuULkjCZ1Kp3KShE6lUzlJQqfyRLFGKdYoxRol/uGBJHQqXRJOVJ5IQqfypiR0Knck4UTlTcUapVijFGuUi5cloVPpktAl4Q6VTuUkCZ1Kl4RO5Y4kdConKl0SOpUnijVKsUYp1ijxDz8sCZ1Kl4QTlS4JnUqXhE6lS0Kn8k3FGqVYoxRrlIuHkvBNKp3KJyXhiSTcofJEsUYp1ijFGuXiZSpvSsIdSehUuiR0SThR6ZLQJeFEpUtCp/KmYo1SrFGKNcrFhyXhDpU7ktCpdEk4UemS0CXhRKVLQpeETqVLQqfyRLFGKdYoxRrl4sepdEnoVO5Q6ZLQqZyodEnoktCpvKlYoxRrlGKNcvHjktCp3JGETqVTOUlCp9KpnCShU3miWKMUa5RijXLxYSqfpHKShE6lUzlJQqfSqZwkoVPpVN5UrFGKNUqxRrl4WRK+KQknKidJ6FTuSEKnckcSOpUnijVKsUYp1ijxD2uMYo1SrFGKNUqxRinWKMUapVijFGuUYo1SrFGKNUqxRinWKMUapVij/Ac1IjHgnVc3VAAAAABJRU5ErkJggg==\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "atender-reservaciones",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/atender-reservaciones/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"atender-reservaciones",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "atender-reservaciones",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/atender-reservaciones/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"atender-reservaciones",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "35"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"23-AMCgSjqcs6dTDVLh7oZecdZCLvw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:12:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"mensaje\": \"Reservación atendida\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Sedes",
+			"item": [
+				{
+					"name": "listar-sedes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-sedes",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"listar-sedes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "listar-sedes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/listar-sedes",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"listar-sedes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "314"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"13a-mbTjuSWuMsgJFvTjhOuTXna9wL0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:17:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"sedes\": [\n        {\n            \"idSede\": 1,\n            \"nombre\": \"SanJoy-SanBorja\",\n            \"direccion\": \"C. Johann Strauss 555, Lima 15037\"\n        },\n        {\n            \"idSede\": 2,\n            \"nombre\": \"SanJoy-SJL\",\n            \"direccion\": \"Av. Sta. Rosa de Lima &, Av. San Martín, San Juan de Lurigancho 15438\"\n        },\n        {\n            \"idSede\": 3,\n            \"nombre\": \"SanJoy-Miraflores\",\n            \"direccion\": \"Av. José Pardo 1299, Miraflores 15047\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "detallar-sedes",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/detallar-sedes/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"ne-reservaciones",
+								"servicio-al-cliente",
+								"v1",
+								"detallar-sedes",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "detallar-sedes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:9000/ne-reservaciones/servicio-al-cliente/v1/detallar-sedes/1",
+									"host": [
+										"localhost"
+									],
+									"port": "9000",
+									"path": [
+										"ne-reservaciones",
+										"servicio-al-cliente",
+										"v1",
+										"detallar-sedes",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "87"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"57-9Fm/2zC8LL86e6AAruFwNtWxxzQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 05 Jul 2023 00:17:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idSede\": 1,\n    \"nombre\": \"SanJoy-SanBorja\",\n    \"direccion\": \"C. Johann Strauss 555, Lima 15037\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
