@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-cartas
+  labels:
+    app: api-cartas
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: api-cartas
+  template:
+    metadata:
+      labels:
+        app: api-cartas
+    spec:
+      containers:
+      - name: api-cartas
+        image: acrsanjoylaoprod001.azurecr.io/api-cartas:latest
+        ports:
+        - containerPort: 9000
