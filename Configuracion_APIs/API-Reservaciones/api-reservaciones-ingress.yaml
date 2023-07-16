@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: addon-http-application-routing
 spec:
   rules:
-  - host: api-reservaciones.2db5f954f43042069dae.eastus.aksapp.io
+  - host: api-reservaciones.eb36bc0f9bda49e495fa.eastus.aksapp.io
     http:
       paths:
       - path: /
